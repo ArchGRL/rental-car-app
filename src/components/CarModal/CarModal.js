@@ -1,3 +1,4 @@
+import { FaTimes } from 'react-icons/fa';
 import css from './CarModal.module.css';
 
 export const CarModal = ({ card, setIsModalOpen }) => {
@@ -28,6 +29,11 @@ export const CarModal = ({ card, setIsModalOpen }) => {
     if (event.target.id !== 'backdrop') return;
     setIsModalOpen(false);
   };
+
+  const handleCloseModal = event => {
+    setIsModalOpen(false);
+  };
+
   return (
     <div
       className={css.modalBackdrop}
@@ -35,6 +41,9 @@ export const CarModal = ({ card, setIsModalOpen }) => {
       id="backdrop"
     >
       <div className={css.modal} key={id} id="modal">
+      <button className={css.closeButton} onClick={handleCloseModal}>
+          <FaTimes />
+        </button>
         <img className={css.modalImg} src={img} alt={model} />
         <p className={css.modalTitle}>
           {make}
@@ -82,5 +91,4 @@ export const CarModal = ({ card, setIsModalOpen }) => {
       </div>
     </div>
   );
-  // });
 };

@@ -9,7 +9,9 @@ export const CarsItem = ({ toggleModal, cars }) => {
   const favorites = useSelector(state => state.favorite);
 
   return cars.map(car => {
-    const { id, make, model, year, type, mileage, img, rentalPrice } = car;
+    const { id, make, model, year, type, mileage, img, rentalPrice, rentalCompany, address } = car;
+    const adressArray = address.split(', ');
+    const newAdresses = adressArray.slice(1);
     return (
       <li key={id} className={css.carCard}>
         <div className={css.imgThumb}>
@@ -37,19 +39,27 @@ export const CarsItem = ({ toggleModal, cars }) => {
             </button>
           )}
         </div>
-        <div
-          style={{
-            display: 'flex',
-          }}
-        >
-          <p>{make}</p>
-          <p>{model},</p>
-          <p>{year}</p>
+        <div>
+          <div className={css.cardTitleWrap}>
+          <p>{make}<span className={css.cardTitleSpan}>{model}</span>, {year}</p>
           <p>{rentalPrice}</p>
-          <p>{type}</p>
-          <p>{mileage}</p>
+          </div>
+        
+
+          <ul className={css.baseInfCard}>
+          {newAdresses.map((newAdress, index) => (
+            <li key={index}>{newAdress}</li>
+          ))}
+          <li>{rentalCompany}</li>
+        </ul>
+
+        <ul className={css.baseInfCard}>
+          <li>{type}</li>
+          <li>{mileage}</li>
+        </ul>
+          
         </div>
-        <button type="button" id={id} onClick={toggleModal}>
+        <button className={css.learnMoreBtn} type="button" id={id} onClick={toggleModal}>
           Learn more
         </button>
       </li>

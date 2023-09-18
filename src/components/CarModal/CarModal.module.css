@@ -15,11 +15,22 @@ ul {
           width: 100%;
           height: 100%;
           z-index: 50;
-  
           background: rgba(0, 0, 0, 0.6);
 }
 
+.closeButton {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    padding: 0;  
+    border: none;
+    background-color: transparent;
+}
+
 .modal {
+position: absolute;
   width: 461px;
   min-height: 672px;
   top: 150px;
@@ -133,7 +144,7 @@ line-height: 18px;
     display: flex;
     flex-wrap: wrap;
     gap: 8px; 
-    padding-bottom: 24px;
+    margin-bottom: 40px;
 }
 
 .modalSpan {
