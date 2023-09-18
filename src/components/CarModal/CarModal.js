@@ -13,11 +13,16 @@ export const CarModal = ({ card, setIsModalOpen }) => {
     description,
     accessories,
     functionalities,
-    rentalConditions
+    rentalConditions,
+    address,
+    fuelConsumption,
+    engineSize
   } = card[0];
 
   const conditionsArray = rentalConditions.split('\n');
   const formattedMileage = mileage.toLocaleString();
+  const adressArray = address.split(', ');
+  const newAdresses = adressArray.slice(1);
 
   const handleBackdropClick = event => {
     if (event.target.id !== 'backdrop') return;
@@ -26,30 +31,33 @@ export const CarModal = ({ card, setIsModalOpen }) => {
   return (
     <div
       className={css.modalBackdrop}
-      // style={{
-      //   position: 'fixed',
-      //   top: '0',
-      //   left: '0',
-      //   width: '100%',
-      //   height: '100%',
-      //   zIndex: '50',
-
-      //   background: 'rgba(0, 0, 0, 0.6)',
-      // }}
       onClick={handleBackdropClick}
       id="backdrop"
     >
       <div className={css.modal} key={id} id="modal">
         <img className={css.modalImg} src={img} alt={model} />
-        <h1>
+        <p className={css.modalTitle}>
           {make}
           <span className={css.modalSpan}>{model}</span>, {year}
-        </h1>
-        <p>
-          {type} {mileage} {rentalPrice}
         </p>
-        <p>{description}</p>
-        <p>Accessories and functionalities:</p>
+
+        <ul className={css.baseInf}>
+          {newAdresses.map((newAdress, index) => (
+            <li key={index}>{newAdress}</li>
+          ))}
+          <li>Id:{id}</li>
+          <li>Year:{year}</li>
+          <li className={css.type}>Type:{type}</li>
+        </ul>
+
+        <ul className={css.baseInfPlus}>
+          <li>Fuel Consumption: {fuelConsumption}</li>
+          <li className={css.type}>Engine Size: {engineSize}</li>
+        </ul>
+
+        <p className={css.description}>{description}</p>
+
+        <p className={css.asFn}>Accessories and functionalities:</p>
         <ul className={css.accessories}>
           {accessories.map((accessory, index) => (
             <li key={index}>{accessory}</li>
@@ -62,14 +70,15 @@ export const CarModal = ({ card, setIsModalOpen }) => {
           ))}
         </ul>
 
-        <p>Rental Conditions:</p>
+        <p className={css.asFn}>Rental Conditions:</p>
         <ul className={css.conditions}>
           {conditionsArray.map((condition, index) => (
-    <li key={index}>{condition}</li>
+    <li className={css.conditionsLi} key={index}>{condition}</li>
   ))}
-  <li>Mileage: {formattedMileage}</li>
-  <li>Price: {rentalPrice}</li>
+  <li className={css.conditionsLi}>Mileage: <span className={css.modalSpan}>{formattedMileage}</span></li>
+  <li className={css.conditionsLi}>Price: <span className={css.modalSpan}>{rentalPrice}</span></li>
         </ul>
+        <a className={css.rentalLink} href='tel:+380730000000'>Rental car</a>
       </div>
     </div>
   );

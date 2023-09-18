@@ -1,0 +1,25 @@
+.navBar {
+    font-size: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navLink {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.navLink:hover,
+.navLink:focus {
+    color: rgba(11, 68, 205, 1);
+}
+
+/* .navLink:active {
+    color: rgba(11, 68, 205, 1);
+    border-bottom: 1.5px solid rgba(11, 68, 205, 1);
+} */
+
+.navBarCar {
+    display: flex;
+    gap: 30px;
+}

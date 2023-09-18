@@ -1,0 +1,39 @@
+.carCard {
+   width: 274px; 
+   height: 426px;
+}
+
+.carImgContainer {
+    width: 274px; 
+    height: 268px; 
+    
+}
+
+.imgThumb{
+position: relative;
+}
+
+.carImg {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: 14px;
+}
+
+.deleteFavoriteBtn {
+    position:absolute;
+    top: 5px;
+    right: 5px;
+    color: rgba(52, 112, 255, 1);
+    background-color: transparent;
+    border: none; 
+}
+
+.addFavoriteBtn {
+    position:absolute;
+    top: 5px;
+    right: 5px;
+    color: rgba(255, 255, 255, 0.8);
+    background-color: transparent;
+    border: none;
+}

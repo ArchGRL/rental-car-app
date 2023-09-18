@@ -1,4 +1,7 @@
 import { AddToFavorite, DeleteFromFavorite } from '../../redux/favorites/actions';
+import { FaHeart, FaRegHeart } from 'react-icons/fa';
+import css from './CarsItem.module.css';
+
 const { useSelector, useDispatch } = require('react-redux');
 
 export const CarsItem = ({ toggleModal, cars }) => {
@@ -8,24 +11,29 @@ export const CarsItem = ({ toggleModal, cars }) => {
   return cars.map(car => {
     const { id, make, model, year, type, mileage, img, rentalPrice } = car;
     return (
-      <li key={id}>
-        <div>
-          <img alt={model} src={img} width="274px" />
+      <li key={id} className={css.carCard}>
+        <div className={css.imgThumb}>
+          <div className={css.carImgContainer}>
+          <img className={css.carImg} alt={model} src={img} crop='fill' />
+          </div>
+          
           {favorites && favorites?.includes(id) ? (
             <button
+            className={css.deleteFavoriteBtn}
               type="button"
               id={id}
               onClick={() => dispatch(DeleteFromFavorite(id))}
             >
-              delete
+              <FaHeart/>
             </button>
           ) : (
             <button
+            className={css.addFavoriteBtn}
               type="button"
               id={id}
               onClick={() => dispatch(AddToFavorite(id))}
             >
-              add
+              <FaRegHeart/>
             </button>
           )}
         </div>

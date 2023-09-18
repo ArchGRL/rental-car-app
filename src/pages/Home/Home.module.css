@@ -1,0 +1,39 @@
+.hero {
+    height: 700px;
+    background: url('../../images/Rental_Car.png') center/cover no-repeat;
+}
+
+.heroTitle {
+    font-weight: 900;
+    width: 300px;
+}
+
+.navLinkPrimary {
+font-weight: 600;
+line-height: 20px;
+display: inline-block;
+padding-top: 12px;
+padding-bottom: 12px;
+border-radius: 12px;
+padding-left: 50px;
+padding-right: 50px;
+background-color: rgba(52, 112, 255, 1);
+color: rgba(255, 255, 255, 1);
+cursor: pointer;
+}
+
+.navLinkPrimary:hover,
+.navLinkPrimary:focus {
+    background-color: rgba(11, 68, 205, 1);
+    }
+
+.heroDescriptionWrap {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.heroDescription {
+    font-size: 18px;
+    width: 300px;
+    padding: 10px;
+}

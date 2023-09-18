@@ -1,7 +1,7 @@
 import { CarsItem } from 'components/CarsItem/CarsItem';
 import { CarModal } from 'components/CarModal/CarModal';
 import { useDispatch, useSelector } from 'react-redux';
-import { getCarsThunk } from 'redux/cars/thunks';
+import { getCarsAPI } from 'redux/cars/thunks';
 const { useEffect, useState } = require('react');
 
 export const FavoritesPage = () => {
@@ -12,7 +12,7 @@ export const FavoritesPage = () => {
   const [currentCar, setCurrentCar] = useState([]);
 
   useEffect(() => {
-    dispatch(getCarsThunk({ page: 1, limit: 32 }));
+    dispatch(getCarsAPI({ page: 1, limit: 32 }));
   }, [dispatch]);
 
   const toggleModal = event => {

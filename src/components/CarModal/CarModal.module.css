@@ -1,9 +1,11 @@
-li {
-    list-style: none;
-}
-
+p {
+    margin: 0;
+  }
+  
 ul {
+    list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .modalBackdrop {
@@ -19,14 +21,13 @@ ul {
 
 .modal {
   width: 461px;
-  height: 752px;
+  min-height: 672px;
   top: 150px;
   left: 496px;
   border-radius: 24px;
   padding: 40px;
 
   position: fixed;
-  /* width: 500px; */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -42,26 +43,119 @@ ul {
     border-radius: 14px;
 }
 
+.modalTitle {
+font-size: 18px;
+font-weight: 500;
+line-height: 24px;
+margin-top: 14px;
+margin-bottom: 8px;
+}
+
 .modalSpan {
     color: #3470FF;
 }
 
+.baseInf {
+margin-bottom: 4px; 
+}
 
+.baseInfPlus {
+    margin-bottom: 14px; 
+    }
+
+.type {
+    text-transform: capitalize;
+}
+
+.description {
+line-height: 20px;
+margin-bottom: 24px; 
+}
+
+.asFn {
+font-weight: 500;
+line-height: 20px;
+margin-bottom: 8px; 
+}
 
 .accessories {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 18px; 
+    margin-bottom: 4px;  
 }
 
 .functionalities {
+    margin-bottom: 24px;  
+}
+
+.accessories,
+.functionalities,
+.baseInf,
+.baseInfPlus {
+font-size: 12px;
+line-height: 18px;
+    color: rgba(18, 20, 23, 0.5);
     display: flex;
     flex-wrap: wrap;
-    gap: 32px; 
+    gap: 8.5px; 
+}
+
+.accessories li,
+.functionalities li,
+.baseInf li,
+.baseInfPlus li {
+    position: relative;
+    padding-right: 8.5px; 
+}
+
+.accessories li::after,
+.functionalities li::after,
+.baseInf li::after,
+.baseInfPlus li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    background-color: rgba(18, 20, 23, 0.1); 
+
+}
+
+.accessories li:last-child::after,
+.functionalities li:last-child::after,
+.baseInf li:last-child::after,
+.baseInfPlus li:last-child::after {
+    content: none;
 }
 
 .conditions {
+font-size: 12px;
+line-height: 18px;
     display: flex;
     flex-wrap: wrap;
-    gap: 32px; 
+    gap: 8px; 
+    padding-bottom: 24px;
+}
+
+.modalSpan {
+color: rgba(52, 112, 255, 1);
+}
+
+.conditionsLi {
+    font-size: 12px;
+    line-height: 18px;
+    padding: 7px 14px;
+    background-color: rgba(249, 249, 249, 1);
+    border-radius: 35px;
+}
+
+.rentalLink {
+    padding: 12px 50px;
+    color: rgba(255, 255, 255, 1);
+    background-color: rgba(52, 112, 255, 1);
+    border-radius: 12px;
+}
+
+.rentalLink:hover,
+.rentalLink:focus {
+    background-color: rgba(11, 68, 205, 1);
 }

@@ -1,7 +1,7 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import { getCars } from './getCars';
 
-export const getCarsThunk = createAsyncThunk(
+export const getCarsAPI = createAsyncThunk(
   'cars/getCars',
   async ({ page, limit }, { rejectWithValue }) => {
     try {

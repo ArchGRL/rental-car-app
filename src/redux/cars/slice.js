@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { getCarsThunk } from './thunks';
+import { getCarsAPI } from './thunks';
 
 const carsState = {
   cars: [],
@@ -14,10 +14,10 @@ export const carsSlice = createSlice({
   initialState: carsState,
   extraReducers: builder => {
     builder
-      .addCase(getCarsThunk.pending, state => {
+      .addCase(getCarsAPI.pending, state => {
         state.isLoading = true;
       })
-      .addCase(getCarsThunk.fulfilled, (state, { payload }) => {
+      .addCase(getCarsAPI.fulfilled, (state, { payload }) => {
         state.isLoading = false;
         state.cars =
           state.cars[0]?.id === payload[0]?.id
