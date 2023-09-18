@@ -1,6 +1,10 @@
 .carCard {
   width: 274px;
+  height: 426px;
   margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .carImgContainer {
@@ -79,7 +83,6 @@
 }
 
 .learnMoreBtn {
-  margin-top: 24px;
   padding: 12px 102px;
   color: rgba(255, 255, 255, 1);
   background-color: rgba(52, 112, 255, 1);
