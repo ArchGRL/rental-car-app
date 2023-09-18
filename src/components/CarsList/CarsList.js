@@ -34,7 +34,11 @@ export const CarsList = () => {
         <CarsItem cars={cars} toggleModal={toggleModal} />
       </ul>
       {CarsItem && !endOfCardsList && (
-        <button className={css.loadMore} type="button" onClick={() => setPageNumber(state => state + 1)}>
+        <button
+          className={css.loadMore}
+          type="button"
+          onClick={() => setPageNumber(state => state + 1)}
+        >
           Load more
         </button>
       )}

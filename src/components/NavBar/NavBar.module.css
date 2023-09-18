@@ -14,11 +14,6 @@
     color: rgba(11, 68, 205, 1);
 }
 
-/* .navLink:active {
-    color: rgba(11, 68, 205, 1);
-    border-bottom: 1.5px solid rgba(11, 68, 205, 1);
-} */
-
 .navBarCar {
     display: flex;
     gap: 30px;

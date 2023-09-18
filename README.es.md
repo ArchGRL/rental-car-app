@@ -1,13 +1,67 @@
-# React homework template
+La aplicación Car Rental es una plataforma basada en web que permite a los usuarios explorar un catálogo de automóviles,
+vea información detallada sobre cada automóvil, agréguelos a sus favoritos y realice pedidos de alquiler.
+Este archivo README proporciona una descripción general de las características de la aplicación e instrucciones sobre cómo usarla.
 
-Este proyecto fue creado con la ayuda de
-[Create React App](https://github.com/facebook/create-react-app).
-[Consulte la documentación](https://facebook.github.io/create-react-app/docs/getting-started)
-para familiarizarse con las funciones opcionales y configurarlas.
+### Página de inicio
+
+![Home Page](./assets/home-page.png)
+
+La página de inicio proporciona información sobre lo que atrae a los usuarios a las empresas de automóviles.
+Cuenta con un botón "Buscar un automóvil" en el que los usuarios pueden hacer clic para explorar el catálogo de automóviles.
+
+### Catálogo de automóviles
+
+![Favorites Page](./assets/favorites-page.png)
+
+La página del catálogo de automóviles muestra una lista de automóviles en forma de tarjetas.
+Cada tarjeta contiene:
+Una foto del coche.
+Información sobre la marca, modelo, año de fabricación y precio de alquiler del coche.
+Un botón "Más información" que abre un modal con información detallada del automóvil y un enlace para solicitarlo.
+Un botón "Agregar a favoritos" para agregar o eliminar autos de los favoritos del usuario.
+
+### Página de favoritos
+
+![Página de favoritos](./assets/favorites-page.png)
+
+La página de favoritos muestra tarjetas de automóviles que se han agregado a los favoritos del usuario.
+Empezando
+
+### Uso
+
+Página de inicio:
+
+Al visitar la aplicación, llegará a la página de inicio.
+Lea la información sobre las empresas de automóviles.
+Haga clic en el botón "Buscar un automóvil" para explorar el catálogo de automóviles.
+
+Catálogo de coches:
+
+Navega por la lista de coches que se muestran como tarjetas.
+Haga clic en el botón "Más información" en una tarjeta para ver información detallada del automóvil y solicitarlo.
+Haga clic en el botón "Agregar a favoritos" para agregar o eliminar autos de sus favoritos.
+
+Página de favoritos:
+
+Haga clic en el enlace "Favoritos" en la navegación para ver los autos que agregó a sus favoritos.
+
+### Tecnologías utilizadas
+
+React: una biblioteca de JavaScript para crear interfaces de usuario.
+Redux: una biblioteca de gestión de estado para gestionar el estado de la aplicación.
+React Router: para manejar el enrutamiento y la navegación dentro de la aplicación.
+Otras bibliotecas y componentes utilizados para la interfaz de usuario y la funcionalidad.
+
+### Contribuyendo
+
+Se aceptan contribuciones a la Solicitud de alquiler de vehículos. Puedes contribuir mediante:
+
+Informar problemas o sugerir mejoras mediante la creación de problemas de GitHub.
+Abrir solicitudes de extracción para abordar problemas o agregar nuevas funciones.
 
 ## Crear un repositorio desde una plantilla
 
-Usa este repositorio de la organización GoIT como plantilla para crear el repositorio de tu proyecto. 
+Usa este repositorio como plantilla para crear el repositorio de tu proyecto. 
 Para hacer esto, haz clic en `«Use this template»` y selecciona la opción
 `«Create a new repository»`, tal como se muestra en la imagen.
 
@@ -72,7 +126,7 @@ la ventana desplegable del enlace `Detalles`.
 Después de un tiempo, normalmente un par de minutos, la página real se puede ver
 en la dirección especificada en la propiedad `homepage`. Por ejemplo, aquí está
 el enlace a la versión activa de este repositorio
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+[https://archgrl.github.io/rental-car-app/](https://archgrl.github.io/rental-car-app/).
 
 Si se abre una página en blanco, asegúrate de que no haya errores en la pestaña
 `Console` relacionados con rutas incorrectas de archivos CSS y JS del proyecto

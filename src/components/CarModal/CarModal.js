@@ -17,7 +17,7 @@ export const CarModal = ({ card, setIsModalOpen }) => {
     rentalConditions,
     address,
     fuelConsumption,
-    engineSize
+    engineSize,
   } = card[0];
 
   const conditionsArray = rentalConditions.split('\n');
@@ -41,10 +41,13 @@ export const CarModal = ({ card, setIsModalOpen }) => {
       id="backdrop"
     >
       <div className={css.modal} key={id} id="modal">
-      <button className={css.closeButton} onClick={handleCloseModal}>
+        <button className={css.closeButton} onClick={handleCloseModal}>
           <FaTimes />
         </button>
-        <img className={css.modalImg} src={img} alt={model} />
+        <div className={css.modalImgThumb}>
+          <img className={css.modalImg} src={img} alt={model} />
+        </div>
+
         <p className={css.modalTitle}>
           {make}
           <span className={css.modalSpan}>{model}</span>, {year}
@@ -82,12 +85,20 @@ export const CarModal = ({ card, setIsModalOpen }) => {
         <p className={css.asFn}>Rental Conditions:</p>
         <ul className={css.conditions}>
           {conditionsArray.map((condition, index) => (
-    <li className={css.conditionsLi} key={index}>{condition}</li>
-  ))}
-  <li className={css.conditionsLi}>Mileage: <span className={css.modalSpan}>{formattedMileage}</span></li>
-  <li className={css.conditionsLi}>Price: <span className={css.modalSpan}>{rentalPrice}</span></li>
+            <li className={css.conditionsLi} key={index}>
+              {condition}
+            </li>
+          ))}
+          <li className={css.conditionsLi}>
+            Mileage: <span className={css.modalSpan}>{formattedMileage}</span>
+          </li>
+          <li className={css.conditionsLi}>
+            Price: <span className={css.modalSpan}>{rentalPrice}</span>
+          </li>
         </ul>
-        <a className={css.rentalLink} href='tel:+380730000000'>Rental car</a>
+        <a className={css.rentalLink} href="tel:+380730000000">
+          Rental car
+        </a>
       </div>
     </div>
   );

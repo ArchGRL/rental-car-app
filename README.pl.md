@@ -1,15 +1,69 @@
+Aplikacja Wypożyczalni Samochodów to platforma internetowa umożliwiająca użytkownikom przeglądanie katalogu samochodów,
+przeglądaj szczegółowe informacje o każdym samochodzie, dodawaj je do ulubionych i składaj zamówienia wynajmu.
+Ten plik README zawiera przegląd funkcji aplikacji i instrukcje dotyczące korzystania z niej.
+
+### Strona główna
+
+![Home Page](./assets/home-page.png)
+
+Strona główna zawiera informacje o tym, co przyciąga użytkowników do firm motoryzacyjnych.
+Zawiera przycisk „Znajdź samochód”, który użytkownicy mogą kliknąć, aby przeglądać katalog samochodów.
+
+### Katalog samochodów
+
+![Car Catalog](./assets/car-catalog.png)
+
+Na stronie katalogu samochodów wyświetlana jest lista samochodów w formie kart.
+Każda karta zawiera:
+Zdjęcie samochodu.
+Informacje o marce, modelu, roku produkcji i cenie wynajmu samochodu.
+Przycisk „Dowiedz się więcej”, który otwiera moduł ze szczegółowymi informacjami o samochodzie i linkiem do jego zamówienia.
+Przycisk „Dodaj do ulubionych”, umożliwiający dodawanie lub usuwanie samochodów z ulubionych użytkownika.
+
+### Strona ulubionych
+
+![Favorites Page](./assets/favorites-page.png)
+
+Strona ulubionych wyświetla karty samochodów, które zostały dodane do ulubionych użytkownika.
+Pierwsze kroki
+
+### Stosowanie
+
+Strona główna:
+
+Po odwiedzeniu aplikacji wylądujesz na stronie głównej.
+Przeczytaj informacje o firmach motoryzacyjnych.
+Kliknij przycisk „Znajdź samochód”, aby zapoznać się z katalogiem samochodów.
+
+Katalog samochodów:
+
+Przejrzyj listę samochodów wyświetlaną jako karty.
+Kliknij przycisk „Dowiedz się więcej” na karcie, aby wyświetlić szczegółowe informacje o samochodzie i zamówić samochód.
+Kliknij przycisk „Dodaj do ulubionych”, aby dodać lub usunąć samochody z ulubionych.
+
+Strona ulubionych:
+
+Kliknij link „Ulubione” w nawigacji, aby wyświetlić samochody dodane do ulubionych.
+
+### Zastosowane technologie
+
+React: Biblioteka JavaScript do tworzenia interfejsów użytkownika.
+Redux: biblioteka zarządzania stanem do zarządzania stanem aplikacji.
+React Router: Do obsługi routingu i nawigacji w aplikacji.
+Inne biblioteki i komponenty używane do interfejsu użytkownika i funkcjonalności.
+
+### Wkład
+
+Mile widziane są datki na rzecz aplikacji wynajmu samochodów. Możesz wnieść swój wkład poprzez:
+
+Zgłaszanie problemów lub sugerowanie ulepszeń poprzez tworzenie problemów GitHub.
+Otwieranie żądań ściągnięcia w celu rozwiązania problemów lub dodania nowych funkcji.
+
 **Read in other languages: [rosyjski](README.md), [polski](README.pl.md).**
-
-# React homework template
-
-Ten projekt został stworzony przy pomocy
-[Create React App](https://github.com/facebook/create-react-app). W celu
-zapoznania się z konfiguracją dodatkowych opcji
-[zobacz dokumentację](https://facebook.github.io/create-react-app/docs/getting-started).
 
 ## Utworzenie repozytorium zgodnie z szablonem
 
-Wykorzystaj to repozytorium organizacji GoIT jako szablon do utworzenia
+Wykorzystaj to repozytorium jako szablon do utworzenia
 repozytorium własnego projektu. W tym celu kliknij na przycisk
 `"Use this template"` i wybierz opcję `"Create a new repository"`, jak pokazano
 na rysunku.
@@ -84,7 +138,7 @@ Po jakimś czasie, zazwyczaj kilku minut, zdeployowaną stronę będzie można
 zobaczyć pod adresem wskazanym w zredagowanej właściwości `homepage`. Tutaj na
 przykład znajduje się odnośnik do zdeployowanej strony w wersji dla tego
 repozytorium
-[https://goitacademy.github.io/react-homework-template](https://goitacademy.github.io/react-homework-template).
+[https://archgrl.github.io/rental-car-app/](https://archgrl.github.io/rental-car-app/).
 
 Jeżeli otwiera się pusta strona, upewnij się, że w zakładce `Console` nie ma
 błędów związanych z nieprawidłowymi ścieżkami do plików CSS i JS projektu
